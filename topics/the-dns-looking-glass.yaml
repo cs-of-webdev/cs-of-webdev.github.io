@@ -1,0 +1,18 @@
+page_id: o
+
+id: 1
+title: The First Few Milliseconds of an HTTPS Connection
+link: http://www.moserware.com/2009/06/first-few-milliseconds-of-https.html
+
+id: 2
+title: "When your IP traffic in AWS disappears into a black hole"
+http://engineering.clever.com/2014/12/10/when-your-ip-traffic-in-aws-disappears-into-a-black-hole/
+
+id: 3
+title: "From HTTP Request to Rendered Page"
+https://spark-public.s3.amazonaws.com/startup/lecture_slides/lecture6-html-css-js.pdf
+description: From Balaji Srinivasan's CS class.
+
+id: 4
+title: DNS Explained
+link: "https://www.youtube.com/watch?v=72snZctFFtA&feature=youtu.be"

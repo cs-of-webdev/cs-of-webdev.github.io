@@ -1,0 +1,21 @@
+page_id: m
+
+id: 1
+title: Confessions of An Intermediate Programmer
+link: http://www.michaelbromley.co.uk/blog/65/confessions-of-an-intermediate-programmer
+description: "What muddling along looks like"
+
+id: 2
+title: Norris Numbers
+link: http://www.teamten.com/lawrence/writings/norris-numbers.html
+description: "How long of a program can you write without getting bogged down in complexity? 2000 lines? 20,000 lines? 200,000 lines?"
+
+id: 3
+title: The trajectory of a software engineer
+link: https://michaelochurch.wordpress.com/2012/01/26/the-trajectory-of-a-software-engineer-and-where-it-all-goes-wrong/
+description: "Church's attempt at constructing a programming skill hierarchy is somewhat arbitrary but a vast improvement over the default: nothing."
+
+id: 4
+title: Programmer competency matrix
+link: http://sijinjoseph.com/programmer-competency-matrix/
+description: "Decomposition of software competency levels, broken down by skill"

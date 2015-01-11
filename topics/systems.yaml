@@ -1,0 +1,17 @@
+page_id: k
+
+
+id: 1
+title: How similar are Big Data programming and multicore programming?
+link: https://www.quora.com/How-similar-are-Big-Data-programming-and-multicore-programming/answer/Keith-Adams
+description: "If you asked some remote machine to do work that you hope will take 100ms, and you don't hear back from the remote machine for 5 seconds, what happened? It is always impossible to distinguish a dead machine from one that is across a misbehaving network from you."
+
+id: 2
+title: Are operating system and systems level programming skills viewed as commodity?
+link: https://www.quora.com/Are-operating-system-and-systems-level-programming-skills-viewed-as-commodity/answer/Keith-Adams
+description: "Why does it seem that there is a dearth of systems-level innovation at present? These things move in cycles. When I was in college in the mid-'90's, it was fashionable to view systems as a solved problem. Then virtual machines came along and upended systems software, keeping much of the systems world, yours truly included, busy throughout the 'aughts. Currently, we are back in a more quiet period, but that equilibrium will be upset one way or another at some point."
+
+id: 3
+title: Re: Faster compilation speed
+link: https://gcc.gnu.org/ml/gcc/2002-08/msg00552.html
+description: "One fundamental fact on modern hardware is that data cache locality is good, and not being in the cache sucks.  This is not likely to change."

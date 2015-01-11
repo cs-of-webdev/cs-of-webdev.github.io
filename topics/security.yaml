@@ -1,0 +1,11 @@
+page_id: c
+
+id: 1
+name: Pascal's Apology
+link: http://carlos.bueno.org/2012/08/pascals-apology.html
+description: "How do you get a fair flip on a biased coin?"
+
+id: 2
+name: "Everything you wanted to know about SQL injection (but were afraid to ask)"
+link: http://www.troyhunt.com/2013/07/everything-you-wanted-to-know-about-sql.html#
+description: "So, you know, if you wanted to exploit a vulnerability...just hypothetically, you know...how would you do it?"

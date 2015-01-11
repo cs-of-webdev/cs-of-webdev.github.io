@@ -1,0 +1,27 @@
+page_id: l
+
+id: 1
+title: Norris Numbers
+link: http://www.teamten.com/lawrence/writings/norris-numbers.html
+description: "How long of a program can you write without getting bogged down in complexity? 2000 lines? 20,000 lines? 200,000 lines?"
+
+id: 2
+title: Curse of the Gifted
+link: http://www.vanadac.com/~dajhorn/novelties/ESR%20-%20Curse%20Of%20The%20Gifted.html
+description: "How long of a program can you write without getting bogged down in complexity? 2000 lines? 20,000 lines? 200,000 lines?"
+discussion: https://news.ycombinator.com/item?id=7219872
+
+id: 3
+title: How Complex Systems Fail
+link: http://www.farnamstreetblog.com/2014/04/how-complex-systems-fail/
+description: "We try to build systems that require multiple points of failure to blow up. What does that mean about the performance of these systems?"
+
+id: 4
+title: How to be a great software developer
+link: http://peternixey.com/post/83510597580/how-to-be-a-great-software-developer
+description: "As a friend once tweeted: 'Just use Postgres. Stop being a hipster, and just use Postgres'"
+
+id: 5
+title: So you want to write your own CSV code
+link: http://tburette.github.io/blog/2014/05/25/so-you-want-to-write-your-own-CSV-code/
+description: What if there are commas inside the fields? What if there are quotes in the fields? What if there is a newline inside a field? What if I put a BOM in my file? Do you really still want to roll your own code to handle CSV?

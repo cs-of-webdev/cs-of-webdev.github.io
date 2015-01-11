@@ -1,0 +1,8 @@
+page_id: i
+
+# a link
+
+id: 1
+title: "How do philosophers make a living?"
+link: https://gist.github.com/staltz/868e7e9bc2a7b8c1f754
+description: "'There are plenty of bad explanations and definitions out there on the internet. Wikipedia is too generic and theoretical as usual. Stackoverflow's canonical answer is obviously not suitable for newcomers. Reactive Manifesto sounds like the kind of thing you show to your project manager or the businessmen at your company. Microsoft's terminology is so heavy and Microsoftish that most of us are left confused.'"

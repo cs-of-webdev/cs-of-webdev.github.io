@@ -1,0 +1,6 @@
+page_id: s
+
+id: 1
+title: Scalable Web Architecture and Distributed Systems
+link: http://www.aosabook.org/en/distsys.html
+description: "Thoughts about using load balancers, proxies, caches, etc"

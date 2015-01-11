@@ -1,0 +1,63 @@
+- Hierarchy display settings:
+  - Metastage: false
+  - Stage: true
+  - Topic: true
+  - Subtopic: true
+- Topic Hierarchy:
+  - Plan:
+    - Career:
+      - Career management:
+        - A Coding Hierarchy
+        - Engineering Management
+        - Paying Programmers
+        - Interviewing
+    - The Overall Environment:
+      - Architecture:
+        - Philosophy of Language
+        - Refactoring the Tech Stack
+        - Reactive
+        - Functional
+        - The Declarative Dream
+    - Product management:
+      - Product Management:
+        - Managing Complexity
+        - Managing Time
+        - Agile v. Waterfall
+      - Project Management:
+        - The Lessons Of Open Source
+        - On Lifestyle Businesses
+        - Interfacing with the business side
+  - Develop:
+    - Frontend:
+      - Frontend development:
+        - Javascript
+        - UI-UX
+    - Backend:
+      - Backend development
+      - Database administration
+        - Database design
+      - Code compilation:
+        - Interpreting the interpreted languages
+      - Systems
+        - Systems
+    - Toolkit:
+      - Debugging:
+        - Speeding up the edit-test-debug cycle
+        - Below the Hood
+      - Coding:
+        - The Text Editor Wars
+  - Deploy:
+    - Testing & Review:
+      - Version control
+      - Testing:
+        - The TDD Wars
+      - Code Review
+        - Linting
+        - Refactoring
+    - Deployment:
+      - Dev Ops
+      - Server management
+      - Security
+        - Security
+      - To the client:
+        - The DNS Looking Glass

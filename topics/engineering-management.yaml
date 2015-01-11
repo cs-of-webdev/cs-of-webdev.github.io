@@ -1,0 +1,16 @@
+page_id: e
+
+id: 1
+title: "Thoughts on the second-track"
+link: http://mcfunley.com/thoughts-on-the-technical-track
+description: "Management hierarchies are natural. A technical track is not. Maintaining one requires constant exertion against the second law of thermodynamics."
+
+id: 2
+title: "How to Scale a Development Team"
+link: http://adam.herokuapp.com/past/2011/4/28/scaling_a_development_team/
+description: "What should an engineering org look like with 2 people? 5? 15? 50?"
+
+id: 3
+title: "Speeding up Your Engineering Org, Part I"
+link: http://blog.hut8labs.com/speeding-up-your-eng-org-part-i.html
+description: "Products made by a higher-velocity engineering org don't just come faster, they are better. But how do you get there?"

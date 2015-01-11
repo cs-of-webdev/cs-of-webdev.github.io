@@ -1,0 +1,16 @@
+page_id: d
+
+id: 1
+title: "The State of Javascript in 2015"
+link: http://www.breck-mckye.com/blog/2014/12/the-state-of-javascript-in-2015/
+description: "On the fragmentation of the JS landscape"
+
+id: 2
+title: "Ember Controllers are Singletons"
+link: http://balinterdi.com/2014/06/26/ember-gotcha-controllers-are-singletons.html
+description: "An example of the common design anti-pattern, and an explanation of why it made sense to use it"
+
+id: 3
+title: We spent a week making Trello boards load extremely fast. Here’s how we did it.
+link: http://blog.fogcreek.com/we-spent-a-week-making-trello-boards-load-extremely-fast-heres-how-we-did-it/
+description: "What does this look like? An awesome link."
