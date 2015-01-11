@@ -34,11 +34,11 @@
         - UI-UX
     - Backend:
       - Backend development
-      - Database administration
+      - Database administration:
         - Database design
       - Code compilation:
         - Interpreting the interpreted languages
-      - Systems
+      - Systems:
         - Systems
     - Toolkit:
       - Debugging:
@@ -51,13 +51,13 @@
       - Version control
       - Testing:
         - The TDD Wars
-      - Code Review
+      - Code Review:
         - Linting
         - Refactoring
     - Deployment:
       - Dev Ops
       - Server management
-      - Security
+      - Security:
         - Security
       - To the client:
         - The DNS Looking Glass
