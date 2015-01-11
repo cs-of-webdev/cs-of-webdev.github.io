@@ -7,8 +7,14 @@
 Hello World
 
 <script type="text/javascript">
+
 var doc = jsyaml.load('greeting: hello\nname: world');
 console.log(doc)
+
+xmlhttp.open("GET","hierarchy.yaml",false);
+xmlhttp.send();
+
+console.log(xmlhttp.responseText)
 
 document.getElementById("userEmail").innerHTML = doc.greeting;
 
