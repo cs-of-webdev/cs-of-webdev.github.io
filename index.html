@@ -8,13 +8,15 @@ Hello World
 
 <script type="text/javascript">
 
-var doc = jsyaml.load('greeting: hello\nname: world');
-console.log(doc)
+
 xmlhttp=new XMLHttpRequest();
 xmlhttp.open("GET","hierarchy.yaml",false);
 xmlhttp.send();
 
 console.log(xmlhttp.responseText)
+
+var doc = jsyaml.load(xmlhttp.responseText);
+console.log(doc)
 
 document.getElementById("userEmail").innerHTML = doc.greeting;
 
