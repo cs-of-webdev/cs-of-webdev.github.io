@@ -1,1 +1,15 @@
+<script src="node_modules/js-yaml/dist/js-yaml.min.js"></script>
+<script src="node_modules/js-yaml/dist/esprima.js"></script>
+
+
+<h1 id="userEmail">Placeholder</h1>
+
 Hello World
+
+<script type="text/javascript">
+var doc = jsyaml.load('greeting: hello\nname: world');
+console.log(doc)
+
+document.getElementById("userEmail").innerHTML = doc.greeting;
+
+</script>
