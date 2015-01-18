@@ -43,7 +43,7 @@ $(document).ready(function () {
             //tr2 = $('<tr/>');
             for (var i=0; i<object[k].length; i++){
                 console.log('in inner loop')
-                topicsForChildren(object[k][i], tr2, Math.floor(width/object[k].length), allRows,rowNum+1)
+                topicsForChildren(object[k][i], Math.floor(width/object[k].length), allRows,rowNum+1)
             }
             //allRows[rowNum+1].push(tr2);
         }
