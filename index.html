@@ -45,7 +45,9 @@ $(document).ready(function () {
     }
 
     tr = $('<tr/>');
-    topicsForChildren(hierarchy, tr)
+    for(var i=0; i<hierarchy.length; i++){
+        topicsForChildren(hierarchy[i], tr)
+    }
     $('table').append(tr);
 
 });
