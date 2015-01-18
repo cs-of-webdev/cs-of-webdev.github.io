@@ -47,10 +47,10 @@ $(document).ready(function () {
                 topicsForChildren(object[k][i], tr2, Math.floor(width/object[k].length), allRows)
             }
             console.log(allRows)
-            allRows.append(tr2);
+            allRows.push(tr2);
         }
         console.log(allRows)
-        allRows.append(tr);
+        allRows.push(tr);
     }
     var rows = []
     tr = $('<tr/>');
