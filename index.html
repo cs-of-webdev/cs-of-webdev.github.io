@@ -46,15 +46,19 @@ $(document).ready(function () {
                 console.log('in inner loop')
                 topicsForChildren(object[k][i], tr2, Math.floor(width/object[k].length))
             }
-            $('table').append(tr);
+            rows.append(tr);
         }
     }
-
+    var rows = []
     tr = $('<tr/>');
     for(var i=0; i<hierarchy.length; i++){
         topicsForChildren(hierarchy[i], tr, Math.floor(basic_width / hierarchy.length))
     }
-    $('table').append(tr);
+    rows.append(tr);
+
+    for (var i=0; i<rows.length; rows++){
+        $('table').append(rows[i]);
+    }
 
 });
 
