@@ -33,7 +33,10 @@ $(document).ready(function () {
     var topicsForChildren = function(object, tr){
         //tr = $('<tr/>');
         console.log(object)
-        if (typeof object === 'string') tr.append("<td>" + object + "</td>");
+        if (typeof object === 'string') {
+            tr.append("<td>" + object + "</td>");
+            return;
+        }
         moreChildren = []
         for(var k in object){
             tr.append("<td>" + k + "</td>");
