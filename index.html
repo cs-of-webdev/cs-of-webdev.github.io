@@ -39,9 +39,11 @@ $(document).ready(function () {
         }
         moreChildren = []
         for(var k in object){
+            console.log('in loop')
             tr.append("<td>" + k + "</td>");
             tr2 = $('<tr/>');
             for (var i=0; i<object[k].length; i++){
+                console.log('in inner loop')
                 topicsForChildren(object[k][i], tr2)
             }
             $('table').append(tr);
