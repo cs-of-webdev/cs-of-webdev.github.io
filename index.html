@@ -30,7 +30,7 @@ $(document).ready(function () {
 
     var basic_width = 450
 
-    var topicsForChildren = function(object, tr, width, rows){
+    var topicsForChildren = function(object, tr, width, allRows){
         //tr = $('<tr/>');
         console.log(object)
         if (typeof object === 'string') {
@@ -44,17 +44,18 @@ $(document).ready(function () {
             tr2 = $('<tr/>');
             for (var i=0; i<object[k].length; i++){
                 console.log('in inner loop')
-                topicsForChildren(object[k][i], tr2, Math.floor(width/object[k].length), rows)
+                topicsForChildren(object[k][i], tr2, Math.floor(width/object[k].length), allRows)
             }
-            rows.append(tr);
+            allRows.append(tr2);
         }
+        console.log(allRows)
+        allRows.append(tr);
     }
     var rows = []
     tr = $('<tr/>');
     for(var i=0; i<hierarchy.length; i++){
         topicsForChildren(hierarchy[i], tr, Math.floor(basic_width / hierarchy.length), rows)
     }
-    rows.append(tr);
 
     for (var i=0; i<rows.length; rows++){
         $('table').append(rows[i]);
