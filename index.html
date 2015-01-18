@@ -9,11 +9,6 @@
 Hello World
 
 <table>
-    <tr>
-        <th>User_Name</th>
-        <th>score</th>
-        <th>team</th>
-    </tr>
 </table>
 
 <script type="text/javascript">
@@ -31,12 +26,27 @@ console.log(doc)
 $(document).ready(function () {
     var json = doc
     var tr;
-    for (var i = 0; i < json.length; i++) {
-        tr = $('<tr/>');
-        tr.append("<td>" + json[i].User_Name + "</td>");
-        tr.append("<td>" + json[i].score + "</td>");
-        tr.append("<td>" + json[i].team + "</td>");
-        $('table').append(tr);
+    var hierarchy = json[1]['Topic Hierarchy']
+
+    var basic_width = 450
+
+    var topicsForChildren = function(object, tr){
+        //tr = $('<tr/>');
+        if (typeof object === 'string') tr.append("<td>" + object + "</td>");
+        moreChildren = []
+        for(var k in object){
+            tr.append("<td>" + k + "</td>");
+            tr2 = $('<tr/>');
+            for (var i=0; i<object[k].length; i++){
+                topicsForChildren(object[k][i], tr2)
+            }
+            $('table').append(tr);
+        }
+    }
+
+    tr = $('<tr/>');
+    topicsForChildren(hierarchy, tr)
+    $('table').append(tr);
     }
 });
 
