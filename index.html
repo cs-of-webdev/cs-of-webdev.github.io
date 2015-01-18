@@ -32,6 +32,7 @@ $(document).ready(function () {
 
     var topicsForChildren = function(object, tr){
         //tr = $('<tr/>');
+        console.log(object)
         if (typeof object === 'string') tr.append("<td>" + object + "</td>");
         moreChildren = []
         for(var k in object){
