@@ -30,21 +30,21 @@ $(document).ready(function () {
 
     var basic_width = 450
 
-    var topicsForChildren = function(object, tr){
+    var topicsForChildren = function(object, tr, width){
         //tr = $('<tr/>');
         console.log(object)
         if (typeof object === 'string') {
-            tr.append("<td>" + object + "</td>");
+            tr.append("<td width='"+ width + "px'>" + object + "</td>");
             return;
         }
         moreChildren = []
         for(var k in object){
             console.log('in loop')
-            tr.append("<td>" + k + "</td>");
+            tr.append("<td width='"+ width + "px'>" + k + "</td>");
             tr2 = $('<tr/>');
             for (var i=0; i<object[k].length; i++){
                 console.log('in inner loop')
-                topicsForChildren(object[k][i], tr2)
+                topicsForChildren(object[k][i], tr2, Math.floor(width/object[k].length))
             }
             $('table').append(tr);
         }
@@ -52,7 +52,7 @@ $(document).ready(function () {
 
     tr = $('<tr/>');
     for(var i=0; i<hierarchy.length; i++){
-        topicsForChildren(hierarchy[i], tr)
+        topicsForChildren(hierarchy[i], tr, Math.floor(basic_width / hierarchy))
     }
     $('table').append(tr);
 
