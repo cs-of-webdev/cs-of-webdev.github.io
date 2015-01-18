@@ -30,32 +30,27 @@ $(document).ready(function () {
 
     var basic_width = 450
 
-    var topicsForChildren = function(object, tr, width, allRows){
+    var topicsForChildren = function(object, width, allRows, rowNum){
         //tr = $('<tr/>');
         console.log(object)
         if (typeof object === 'string') {
-            tr.append("<td width='"+ width + "px'>" + object + "</td>");
+            allRows[rowNum].append("<td width='"+ width + "px'>" + object + "</td>");
             return;
         }
-        moreChildren = []
         for(var k in object){
             console.log('in loop')
-            tr.append("<td width='"+ width + "px'>" + k + "</td>");
-            tr2 = $('<tr/>');
+            allRows[rowNum].append("<td width='"+ width + "px'>" + k + "</td>");
+            //tr2 = $('<tr/>');
             for (var i=0; i<object[k].length; i++){
                 console.log('in inner loop')
-                topicsForChildren(object[k][i], tr2, Math.floor(width/object[k].length), allRows)
+                topicsForChildren(object[k][i], tr2, Math.floor(width/object[k].length), allRows,rowNum+1)
             }
-            console.log(allRows)
-            allRows.push(tr2);
+            //allRows[rowNum+1].push(tr2);
         }
-        console.log(allRows)
-        allRows.push(tr);
     }
-    var rows = []
-    tr = $('<tr/>');
+    var rows = [$('<tr/>'),$('<tr/>'),$('<tr/>'),$('<tr/>'),$('<tr/>')]
     for(var i=0; i<hierarchy.length; i++){
-        topicsForChildren(hierarchy[i], tr, Math.floor(basic_width / hierarchy.length), rows)
+        topicsForChildren(hierarchy[i], Math.floor(basic_width / hierarchy.length), rows,0)
     }
 
     for (var i=0; i<rows.length; i++){
