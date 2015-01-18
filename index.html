@@ -30,7 +30,7 @@ $(document).ready(function () {
 
     var basic_width = 450
 
-    var topicsForChildren = function(object, tr, width){
+    var topicsForChildren = function(object, tr, width, rows){
         //tr = $('<tr/>');
         console.log(object)
         if (typeof object === 'string') {
@@ -52,7 +52,7 @@ $(document).ready(function () {
     var rows = []
     tr = $('<tr/>');
     for(var i=0; i<hierarchy.length; i++){
-        topicsForChildren(hierarchy[i], tr, Math.floor(basic_width / hierarchy.length))
+        topicsForChildren(hierarchy[i], tr, Math.floor(basic_width / hierarchy.length), rows)
     }
     rows.append(tr);
 
