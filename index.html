@@ -1,6 +1,7 @@
 <script src="node_modules/js-yaml/dist/js-yaml.min.js"></script>
 <script src="node_modules/js-yaml/dist/esprima.js"></script>
 <script src="js/jquery-1.11.2.min.js"></script>
+<script src="js/d3.v3.min.js"></script>
 
 
 
@@ -18,31 +19,31 @@ xmlhttp=new XMLHttpRequest();
 xmlhttp.open("GET","hierarchy.yaml",false);
 xmlhttp.send();
 
-console.log(xmlhttp.responseText)
+//console.log(xmlhttp.responseText)
 
 var doc = jsyaml.load(xmlhttp.responseText);
-console.log(doc)
+//console.log(doc)
 
 $(document).ready(function () {
     var json = doc
     var tr;
     var hierarchy = json[1]['Topic Hierarchy']
-
+    console.log(hierarchy)
     var basic_width = 1500
 
     var topicsForChildren = function(object, width, allRows, rowNum){
         //tr = $('<tr/>');
-        console.log(object)
+        //console.log(object)
         if (typeof object === 'string') {
             allRows[rowNum].append("<td width='"+ width + "px'>" + object + "</td>");
             return;
         }
         for(var k in object){
-            console.log('in loop')
+            //console.log('in loop')
             allRows[rowNum].append("<td width='"+ width + "px'>" + k + "</td>");
             //tr2 = $('<tr/>');
             for (var i=0; i<object[k].length; i++){
-                console.log('in inner loop')
+                //console.log('in inner loop')
                 topicsForChildren(object[k][i], Math.floor(width/object[k].length), allRows,rowNum+1)
             }
             //allRows[rowNum+1].push(tr2);
@@ -57,8 +58,89 @@ $(document).ready(function () {
         $('table').append(rows[i]);
     }
 
+var width = 960,
+    height = 500;
+
+var svg = d3.select("body").append("svg")
+    .attr("width", width)
+    .attr("height", height)
+
+var old_json = {"nodes":[
+  {"x":80, "r":40, "label":"Node 1"},
+  {"x":200, "r":60, "label":"Node 2"},
+  {"x":380, "r":80, "label":"Node 3"}
+]}
+
+
+
+var new_list = []
+
+
+
+var addObjToList = function(key, index, row) {
+    var new_obj = {
+            x: (80 + 60 * index + 60 * index * index),
+            y: row * 180,
+            r: (40 + 20 * index),
+            label: key
+          }
+    console.log(new_obj)
+    new_list.push(new_obj)
+}
+
+var addChildrenToList = function(childObject, newRow) {
+    childObject.forEach(function(child_obj, child_index){
+        addObjToList(child_obj, child_index, newRow)
+    })
+}
+
+var addObjAndChildrenToList = function(childObject, key, index, row) {
+    console.log(childObject)
+    addObjToList(key, index, row)
+    addChildrenToList(childObject, row+1)
+}
+
+
+
+var processObjAndChildrenFactory = function(row){
+    return function(obj, index){
+        console.log('hello')
+        var keys = [];
+        for(var k in obj) {
+            keys.push(k);
+        }
+        var onlyKey = keys[0];
+        addObjAndChildrenToList(obj[onlyKey], onlyKey, index, row)
+    }
+}
+
+hierarchy.forEach(processObjAndChildrenFactory(4))
+
+var new_json = { "nodes" : new_list }
+
+    var elem = svg.selectAll("g myCircleText")
+        .data(new_json.nodes)
+
+    /*Create and place the "blocks" containing the circle and the text */
+    var elemEnter = elem.enter()
+        .append("g")
+        .attr("transform", function(d){return "translate("+d.x+","+(80+d.y)+")"})
+
+    /*Create the circle for each block */
+    var circle = elemEnter.append("circle")
+        .attr("r", function(d){return d.r} )
+        .attr("stroke","black")
+        .attr("fill", "white")
+
+    /* Create the text for each block */
+    elemEnter.append("text")
+        .attr("dx", function(d){return -20})
+        .text(function(d){return d.label})
+
+
 });
 
 document.getElementById("userEmail").innerHTML = doc.greeting;
+
 
 </script>
